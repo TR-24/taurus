@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAURUS Fotocopy</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="icon" href="./images/taurus-logo.png" type="image/x-icon">
+
+
+</head>
+<style>
+    * {
+        -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important;
+        -webkit-focus-ring-color: rgba(255, 255, 255, 0) !important;
+        outline: none !important;
+    }
+</style>
+
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loader"></div>
+    </div>
+    <div class="card">
+        <div class="profile reveal">
+            <img src="https://i.ibb.co/svH5vqgX/DESIGN-LOGO-TAURUS.jpg" alt="Profile Image" class="profile-image">
+            <h1 class="header-name">TAURUS Fotocopy <img src="./images/verified.svg" alt="Verified" height="22"></h1>
+            <a>Alamat : Depan Polsek Ciniru Desa Ciniru Kec. Ciniru Kab. Kuningan - Jawa Barat</a>
+        </div>
+        <div class="contact-info reveal">
+            <a href="https://www.facebook.com/add/tejazmali" class="contact-link">
+                <div class="contact-item">
+                    <img class="icon " src="./images/facebook.svg" alt="Facebook">
+                    <span>Facebook</span>
+                </div>
+            </a>
+            <a href="https://www.instagram.com/taurus24fotocopy" class="contact-link">
+                <div class="contact-item">
+                    <img class="icon" src="https://raw.githubusercontent.com/tejasmali07/Linktree-Page-HTML-CSS-/313e6801ff1c39527a23da5b47f7d61c32261227/Images/instagram (1).svg" alt="Instagram">
+                    <span>Instagram</span>
+                </div>
+            </a>
+            <a href="https://wa.me/082123404600" class="contact-link">
+                <div class="contact-item">
+                    <img class="icon" src="https://raw.githubusercontent.com/tejasmali07/Linktree-Page-HTML-CSS-/313e6801ff1c39527a23da5b47f7d61c32261227/Images/whatsapp (2).svg" alt="WhatsApp">
+                    <span>WhatsApp</span>
+                </div>
+            </a>
+            <a href="https://wa.me/082123404600" class="contact-link">
+                <div class="contact-item">
+                    <img class="icon" src="https://img.icons8.com/?size=100&id=118638&format=png&color=ffffff" alt="WhatsApp">
+                    <span>TikTok</span>
+                </div>
+            </a>
+            <a href="https://wa.me/082123404600" class="contact-link">
+                <div class="contact-item">
+                    <img class="icon" src="https://img.icons8.com/?size=100&id=37326&format=png&color=ffffff" alt="WhatsApp">
+                    <span>Youtube</span>
+                </div>
+            </a>
+            <a href="taurus24fotocopy@gmail.com" class="contact-link">
+                <div class="contact-item">
+                    <img class="icon" src="https://raw.githubusercontent.com/tejasmali07/Linktree-Page-HTML-CSS-/313e6801ff1c39527a23da5b47f7d61c32261227/Images/envelope-regular.svg" alt="Gmail">
+                    <span>Gmail</span>
+                </div>
+            </a>
+        </div>
+        <footer>
+	        <p> Copyright &copy; <span id="copyright-year"> </span> TAURUS. All rights reserved.</p>
+        </footer>
+    </div>
+    <script>
+        document.getElementById("copyright-year").innerHTML = new Date().getFullYear();
+        window.addEventListener('load', function () {
+            const loadingScreen = document.getElementById('loading-screen');
+            setTimeout(function () {
+                loadingScreen.style.display = 'none';
+            },); // Adds a 1-second delay for debugging
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const elements = document.querySelectorAll('.reveal');
+
+            const revealOnScroll = function () {
+                for (let i = 0; i < elements.length; i++) {
+                    let windowHeight = window.innerHeight;
+                    let elementTop = elements[i].getBoundingClientRect().top;
+                    let elementVisible = 150;
+
+                    if (elementTop < windowHeight - elementVisible) {
+                        elements[i].classList.add('reveal-active');
+                    } else {
+                        elements[i].classList.remove('reveal-active');
+                    }
+                }
+            };
+
+            window.addEventListener('scroll', revealOnScroll);
+            revealOnScroll(); // Initial check on page load
+        });
+    </script>
+</body>
+
+</html>
