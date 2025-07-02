@@ -1,0 +1,1 @@
+"Customize the links in the HTML code to fit your specific preferences. Additionally, use different icons if preferred. Font Awesome icons are used in the current setup, but they can be replaced with other icon libraries or custom icons to better suit the design"
