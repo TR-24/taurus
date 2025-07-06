@@ -25,14 +25,14 @@ body {
 }
 
 .profile {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     margin-top: 50px;
 }
 
 .profile-image {
     width: 100px;
     height: 100px;
-    border-radius: 50%;
+    border-radius: 60%;
 }
 
 h1 {
