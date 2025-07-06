@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAURUS Fotocopy</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="icon" href="./taurus-logo.png" type="image/x-icon">
+
+
+</head>
+<style>
+    * {
+        -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important;
+        -webkit-focus-ring-color: rgba(255, 255, 255, 0) !important;
+        outline: none !important;
+    }
+</style>
+
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loader"></div>
+    </div>
+    <div class="card">
+        <div class="profile reveal">
+            <img src="./taurus-logo.png" alt="Profile Image" class="profile-image">
+            <h1 class="header-name">TAUPIK RUSMADI, S.E <img src="./verified.svg" alt="Verified" height="22"></h1>
+        </div>
+        <div class="contact-info reveal">
+            <a href="https://www.facebook.com/taurus24fotocopy" class="contact-link">
+                <div class="contact-item">
+                    <img class="icon " src="./facebook.svg" alt="Facebook">
+                    <span>FACEBOOK</span>
+                </div>
+            </a>
+            <a href="https://www.instagram.com/taurus24fotocopy" class="contact-link">
+                <div class="contact-item">
+                    <img class="icon" src="https://raw.githubusercontent.com/tejasmali07/Linktree-Page-HTML-CSS-/313e6801ff1c39527a23da5b47f7d61c32261227/Images/instagram (1).svg" alt="Instagram">
+                    <span>INSTAGRAM</span>
+                </div>
+            </a>
+            <a href="https://wa.me/+6282123404600" class="contact-link">
+                <div class="contact-item">
+                    <img class="icon" src="https://raw.githubusercontent.com/tejasmali07/Linktree-Page-HTML-CSS-/313e6801ff1c39527a23da5b47f7d61c32261227/Images/whatsapp (2).svg" alt="WhatsApp">
+                    <span>WHATSAPP</span>
+                </div>
+            </a>
+            <a href="https://www.tiktok.com/@taurus24_company" class="contact-link">
+                <div class="contact-item">
+                    <img class="icon" src="https://img.icons8.com/?size=100&id=118638&format=png&color=ffffff" alt="Tiktok">
+                    <span>TIKTOK</span>
+                </div>
+            </a>
+            <a href="https://www.google.com/maps/place/Taurus+Fotocopy/@-7.0421938,108.5001258,15z/data=!4m5!3m4!1s0x0:0xf8b254c31953b000!8m2!3d-7.0421938!4d108.5001258" class="contact-link">
+                <div class="contact-item">
+                    <img class="icon" src="https://img.icons8.com/?size=100&id=7880&format=png&color=FFFFFF" alt="Maps">
+                    <span>MAPS</span>
+                </div>
+            </a>
+            <a href="./owner.html" class="contact-link">
+                <div class="contact-item">
+                    <img class="icon" src="https://img.icons8.com/?size=100&id=98957&format=png&color=FFFFFF" alt="Owner">
+                    <span>OWNER</span>
+                </div>
+            </a>
+        </div>
+        <footer>
+            <p class="contact-link"> Copyright &copy; <span id="copyright-year"> </span> Made With 💖 by Taupik Rusmadi.</p>
+        </footer>
+    </div>
+    <script>
+        document.getElementById("copyright-year").innerHTML = new Date().getFullYear();
+        window.addEventListener('load', function () {
+            const loadingScreen = document.getElementById('loading-screen');
+            setTimeout(function () {
+                loadingScreen.style.display = 'none';
+            },); // Adds a 1-second delay for debugging
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const elements = document.querySelectorAll('.reveal');
+
+            const revealOnScroll = function () {
+                for (let i = 0; i < elements.length; i++) {
+                    let windowHeight = window.innerHeight;
+                    let elementTop = elements[i].getBoundingClientRect().top;
+                    let elementVisible = 150;
+
+                    if (elementTop < windowHeight - elementVisible) {
+                        elements[i].classList.add('reveal-active');
+                    } else {
+                        elements[i].classList.remove('reveal-active');
+                    }
+                }
+            };
+
+            window.addEventListener('scroll', revealOnScroll);
+            revealOnScroll(); // Initial check on page load
+        });
+    </script>
+</body>
+
+</html>
