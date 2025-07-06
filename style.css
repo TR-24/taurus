@@ -61,18 +61,7 @@ h1 {
     transform: scale(1); /* Ensure the default scale is 1 */
     color: white; /* Ensure text color is white */
 }
-.contact-footer {
-    border-radius: 10px;
-    padding: 20px;
-    margin: 7px 0 ;
-    display: flex;
-    align-items: center;
-    /*background-color: rgba(0, 0, 0, 0.5);
-    cursor: pointer;*/
-    /*transition: transform 0.3s, box-shadow 0.3s;*/
-    /*transform: scale(1);*/ /* Ensure the default scale is 1 */
-    /*color: white;*/ /* Ensure text color is white */
-}
+
 
 .contact-item:hover {
     box-shadow: 20px 20px 30px rgba(99, 96, 96, 0.2);
